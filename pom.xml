@@ -4,4 +4,27 @@
   <artifactId>BDD_Final_08</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+  <dependencies>
+  
+  <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
+	<dependency>
+	    <groupId>info.cukes</groupId>
+	    <artifactId>cucumber-java</artifactId>
+	    <version>1.2.4</version>
+	</dependency>
+  <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
+	<dependency>
+	    <groupId>info.cukes</groupId>
+	    <artifactId>cucumber-junit</artifactId>
+	    <version>1.2.4</version>
+	    <scope>test</scope>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-core -->
+<dependency>
+    <groupId>info.cukes</groupId>
+    <artifactId>cucumber-core</artifactId>
+    <version>1.2.4</version>
+</dependency>
+  </dependencies>
+  
 </project>
