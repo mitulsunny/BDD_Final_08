@@ -7,11 +7,11 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-//<<<<<<< HEAD
-//	//features= {".\\src\\test\\java\\com\\bddfinal\\features"},
-//		//features= {"src/test/java/com/bddfinal/features"},	
-//		features= {"src//test//java//com//bddfinal//features"},
-//=======
+
+//	features= {".\\src\\test\\java\\com\\bddfinal\\features"},
+//  features= {"src/test/java/com/bddfinal/features"},	
+//	features= {"src//test//java//com//bddfinal//features"},
+
 	//features= {".//src//test//java//com//bddfinal//features"},
 	//features= {"./src/test/java/com/bddfinal/features"},
 	features= {"src/test/java/com/bddfinal/features"},
