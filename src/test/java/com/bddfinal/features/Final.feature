@@ -1,10 +1,11 @@
 Feature: Osa login with email and  password
 
-  Background: Given I enter the osa url "https://osaconsultingtech.com/"
-    And I click on forum button
+ # Background: 
 
   @InvalidUser
   Scenario: As a guest of osa trying to login
+  Given I enter the osa url "https://osaconsultingtech.com/"
+    And I click on forum button
     And I enter Invalid email
     And I enter Invalid Password
     When I click on login button
