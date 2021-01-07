@@ -38,15 +38,26 @@ public class Browser {
 	}
 	
 	
+//	public static void getBrowserForMac(String browser) {
+//		if(browser.equals("firefox")) {
+//			System.setProperty("webdriver.gecko.driver", basePath+"/src/test/resources/drivers/mac/geckodriver");
+//			 dr=new FirefoxDriver();
+//		}else if(browser.equals("chrome")) {
+//			System.setProperty("webdriver.chrome.driver", basePath+"/src/test/resources/drivers/mac/chromedriver");
+//			 dr= new ChromeDriver();
+//		}else {
+//			System.out.println("You have entered "+ browser+" that does not exist. Please either chrome or firefox");
+//		}
+//	}
 	public static void getBrowserForMac(String browser) {
-		if(browser.equals("firefox")) {
-			System.setProperty("webdriver.gecko.driver", basePath+"\\src\\test\\resources\\drivers\\mac\\geckodriver");
-			 dr=new FirefoxDriver();
-		}else if(browser.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", basePath+"\\src\\test\\resources\\drivers\\mac\\chromedriver");
-			 dr= new ChromeDriver();
+		if(browser.equalsIgnoreCase("chrome")) {
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/test/resources/drivers/mac/chromedriver");
+			dr = new ChromeDriver();
+		}else if(browser.equalsIgnoreCase("firefox")) {
+			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"/src/test/resources/drivers/mac/geckodriver");
+			dr = new FirefoxDriver();
 		}else {
-			System.out.println("You have entered "+ browser+" that does not exist. Please either chrome or firefox");
+			System.out.println("Please set the executable browser path");
 		}
 	}
 
