@@ -2,6 +2,11 @@ package com.bddfinal.steps;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import com.osa.base.Browser;
+
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -9,26 +14,29 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class FinalSteps {
-	
+	public WebDriver dr=null;
 
 @Given("^I enter the osa url \"([^\"]*)\"$")
-public void i_enter_the_osa_url(String arg1) throws Throwable {
+public void i_enter_the_osa_url(String url) throws Throwable {
+	dr=Browser.openBrowser("chrome");
+	dr.get(url);
+	
     
 }
 
-@Given("^I click on forum button$")
+@And("^I click on forum button$")
 public void i_click_on_forum_button() throws Throwable {
-   
+	dr.findElement(By.xpath("//a[text()='Forum']")).click();
 }
 
-@Given("^I enter Invalid email$")
+@And("^I enter Invalid email$")
 public void i_enter_Invalid_email() throws Throwable {
-    
+    dr.findElement(By.id("username")).sendKeys("abcd");
 }
 
 @Given("^I enter Invalid Password$")
 public void i_enter_Invalid_Password() throws Throwable {
-    
+	dr.findElement(By.id("password")).sendKeys("1234567"); 
 }
 
 @When("^I click on login button$")
