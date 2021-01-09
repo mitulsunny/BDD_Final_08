@@ -39,7 +39,7 @@ public void i_enter_Invalid_email() throws Throwable {
     log.info("checking with invalid email"); 
 }
 
-@Given("^I enter Invalid Password$")
+@And("^I enter Invalid Password$")
 public void i_enter_Invalid_Password() throws Throwable {
 	dr.findElement(By.id("password")).sendKeys("1234567"); 
 	log.info("checking with invalid password"); 
@@ -55,12 +55,12 @@ public void i_see_invalid_username_and_password() throws Throwable {
     
 }
 
-@Given("^I enter valid email$")
+@And("^I enter valid email$")
 public void i_enter_valid_email() throws Throwable {
 	log.info("checking with valid email"); 
 }
 
-@Given("^I enter valid Password$")
+@And("^I enter valid Password$")
 public void i_enter_valid_Password() throws Throwable {
 	log.info("checking with valid password"); 
 	
