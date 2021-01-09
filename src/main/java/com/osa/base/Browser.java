@@ -27,8 +27,7 @@ public class Browser {
 		dr.manage().deleteAllCookies();
 		dr.manage().window().maximize();
 		
-		 
-		return dr;
+		 return dr;
 	}
 	
 	/**
@@ -46,9 +45,7 @@ public class Browser {
 		}else {
 			System.out.println("You have entered "+ browser+" that does not exist. Please either chrome or firefox");
 		}
-		
 	}
-	
 	
 //	public static void getBrowserForMac(String browser) {
 //		if(browser.equals("firefox")) {
