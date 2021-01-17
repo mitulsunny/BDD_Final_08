@@ -1,4 +1,4 @@
-Feature: Osa login with email and  password
+Feature: OSA login Test.
 
   # Background:
   @InvalidUser
