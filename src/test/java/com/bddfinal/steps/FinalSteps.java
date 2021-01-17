@@ -87,6 +87,7 @@ public void i_enter_valid_Password(String password) throws Throwable {
 @And("^I enter the email and password$")
 public void i_enter_the_email_and_password(DataTable credentials) throws Throwable {
 	List <List <String>> data=credentials.raw();
+	
 	//And I enter the email and password
     //|abcd@gmail.com|1234567|
 	//driver.findElement(By.id("email")).sendKeys(data.get(0).get(0));
