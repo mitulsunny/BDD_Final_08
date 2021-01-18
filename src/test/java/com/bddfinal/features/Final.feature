@@ -1,10 +1,9 @@
 Feature: OSA login Test.
 
- # Background: 
-
+  # Background:
   @InvalidUser
   Scenario: As a guest of osa trying to login
-  Given I enter the osa url "https://osaconsultingtech.com/"
+    Given I enter the osa url "https://osaconsultingtech.com/"
     And I click on forum button
     And I enter Invalid email
     And I enter Invalid Password
@@ -17,8 +16,8 @@ Feature: OSA login Test.
     And I enter valid Password
     When I click on login button
     Then I verify the student page
-    
-    @validUsernameTwoline
+
+  @validUsernameTwoline
   Scenario: As a student of osa trying to login
     And I enter valid emailParameter "abcd@gmail.com"
     And I enter valid PasswordParameter "1234567"
@@ -27,29 +26,22 @@ Feature: OSA login Test.
 
   @validUsernameParameter
   Scenario Outline: As a student of osa trying to login
-    And I enter valid email <username>
-    And I enter valid Password <password>
+    And I enter valid email "<username>"
+    And I enter valid Password "<password>"
     When I click on login button
     Then I verify the student page
 
     Examples: 
-      | username | password      |
-      | "fhfhfh" | "hgfhggd+gjg" |
-      | "hgjg"   | "ghhfhf"      |
-      
-     @validUsernameOneLineParm
+      | username | password    |
+      | fhfhfh   | hgfhggd+gjg |
+      | hgjg     | ghhfhf      |
+
+  @validUsernameOneLineParm
   Scenario: As a student of osa trying to login
     And I enter the email and password
-    |abcd@gmail.com|1234567|
+      | abcd@gmail.com | 1234567 |
     When I click on login button
-    Then I verify the student page 
-      
-      
-      
-      
-      
-      
-      
+    Then I verify the student page
 #Author: your.email@your.domain.com
 #Keywords Summary :
 #Feature: List of scenarios.
