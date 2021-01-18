@@ -46,37 +46,37 @@ public class WebElementsLocation {
 		return element;
 	}
 
-	public void myClick(WebDriver dr, String xpath) {
+	public static void myClick(WebDriver dr, String xpath) {
 
 		dr.findElement(By.xpath(xpath)).click();
 
 	}
 
-	public void myClick(WebElement ele) { 
+	public static void myClick(WebElement ele) { 
 
 		ele.click();
 
 	}
 
-	public void myClick(WebDriver dr, By by) {
+	public static void myClick(WebDriver dr, By by) {
 
 		dr.findElement(by).click();
 
 	}
 
-	public void sendKey(WebDriver dr, String xpath, String value) {
+	public static void sendKey(WebDriver dr, String xpath, String value) {
 
 		dr.findElement(By.xpath(xpath)).sendKeys(value);
 
 	}
 
-	public void sendKey(WebElement ele, String value) {
+	public static void sendKey(WebElement ele, String value) {
 
 		ele.sendKeys(value);
 
 	}
 
-	public void sendKey(WebDriver dr, By by, String value) {
+	public static void sendKey(WebDriver dr, By by, String value) {
 
 		dr.findElement(by).sendKeys(value);
 
