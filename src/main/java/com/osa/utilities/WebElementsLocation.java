@@ -7,13 +7,13 @@ import org.openqa.selenium.support.PageFactory;
 
 public class WebElementsLocation {
 
-	static WebDriver dr = null;
-	static WebElement element = null;
+	public static WebDriver dr = null;
+	public static WebElement element = null;
 
 	public WebElementsLocation(WebDriver dr) {
 		this.dr = dr;
 		//PageFactory.initElements(dr, this);
-}
+   }
 
 	public static void myClick(String type, String value) {
 
@@ -46,37 +46,37 @@ public class WebElementsLocation {
 		return element;
 	}
 
-	public static void myClick(WebDriver dr, String xpath) {
+	public static void myClickWithXpath(String xpath) {
 
 		dr.findElement(By.xpath(xpath)).click();
 
 	}
 
-	public static void myClick(WebElement ele) { 
+	public static void myClickWithWebElement(WebElement ele) { 
 
 		ele.click();
 
 	}
 
-	public static void myClick(WebDriver dr, By by) {
+	public static void myClickWithBy(By by) {
 
 		dr.findElement(by).click();
 
 	}
 
-	public static void sendKey(WebDriver dr, String xpath, String value) {
+	public static void sendKeyWithXpathAndValue(String xpath, String value) {
 
 		dr.findElement(By.xpath(xpath)).sendKeys(value);
 
 	}
 
-	public static void sendKey(WebElement ele, String value) {
+	public static void sendKeyWithEle(WebElement ele, String value) {
 
 		ele.sendKeys(value);
 
 	}
 
-	public static void sendKey(WebDriver dr, By by, String value) {
+	public static void sendKeyByAndString(By by, String value) {
 
 		dr.findElement(by).sendKeys(value);
 
